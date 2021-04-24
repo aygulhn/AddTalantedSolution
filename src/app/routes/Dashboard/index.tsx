@@ -3,6 +3,7 @@ import {observer, inject} from 'mobx-react';
 import {Navigation} from '../../../containers/Navigation'
 import {ICategoryStore} from "../../../store/CategoryStore";
 import Poster from "../../../components/Poster";
+import {withRouter} from "react-router";
 
 
 @inject("categoryStore")

@@ -9,10 +9,10 @@ const App: React.FC = (props) => {
 
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-3 col-md-1 nopadding">
+                <div className="col-2 col-sm-2 col-md-1 nopadding">
                     <SideBar/>
                 </div>
-                <div className="col-sm-9 col-md-11 nopadding">
+                <div className="col-10 col-sm-10 col-md-11 nopadding">
                     <Router>
                         <Routes/>
                     </Router>

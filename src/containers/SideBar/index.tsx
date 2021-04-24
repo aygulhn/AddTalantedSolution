@@ -32,6 +32,22 @@ export const SideBar: React.FC = (props) => {
 
     const [menuItems, setMenuItems] = useState<INavItem[]>(navigationMenus)
 
+    const handleRouterChange = (item: INavItem) => {
+        setMenuItems(prev =>
+            prev.map(menuItem => {
+                    if (menuItem.id === item.id && !menuItem.isActive) {
+                        return {...menuItem, isActive: !menuItem.isActive}
+                    } else if (menuItem.id === item.id && menuItem.isActive) {
+                        return menuItem;
+                    } else {
+                        return {...menuItem, isActive: false}
+                    }
+                    return menuItem;
+                }
+            )
+        )
+    }
+
 
     return (
         <Router>
@@ -39,6 +55,7 @@ export const SideBar: React.FC = (props) => {
                 <ul className="nav flex-column">
                     {menuItems.map(item =>
                         <Item
+                            handleRouterChange={handleRouterChange}
                             item={item}/>
                     )}
                 </ul>

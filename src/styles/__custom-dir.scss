@@ -9,20 +9,19 @@
   font-family: Montserat, sans-serif;
 }
 
-  ::-webkit-scrollbar {
-    width: 1em;
-  }
+::-webkit-scrollbar {
+  width: 1em;
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: pink;
-    box-shadow: inset 0 0 6px $pink;
-  }
+::-webkit-scrollbar-track {
+  background-color: pink;
+  box-shadow: inset 0 0 6px $pink;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
-
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
 
 
 .nopadding {
@@ -68,16 +67,25 @@
 .dashboard {
   min-height: 100vh;
   background-color: $light;
-  padding: 64px 0 0 99px;
+  //padding: 64px 0 0 99px;
+  padding: 5vw 0 0 6vw;
 
   .dashboard__header {
-    margin-right: 99px;
-    margin-bottom: 60px;
+    margin-right: 6vw;
+    //margin-bottom: 60px;
+    margin-bottom: 5vw;
   }
 
   .dashboard__body {
-    height: calc(100vh - 184px);
+    height: calc(100vh - 10vw - 56px);
     overflow: auto;
+    //height: 78vh;
+  }
+
+  @media (max-width: 1099px) {
+    .dashboard__body {
+      height: calc(100vh - 10vw - 108px);
+    }
   }
 }
 
@@ -106,27 +114,29 @@
 }
 
 //POSTER
-.poster{
+.poster {
   position: relative;
-  margin-right: 99px;
+  margin-right: 6vw;
   margin-bottom: 60px;
-  img{
-    width: -webkit-fill-available
+
+  img {
+    width: 100%
   }
-  .poster__legend{
+
+  .poster__legend {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    padding: 42px;
+    padding: 3vw;
     color: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    .action{
-      img{
-        width: 84px;
+    .action {
+      img {
+        width: 5vw;
       }
     }
 

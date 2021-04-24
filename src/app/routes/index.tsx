@@ -5,7 +5,8 @@ const Routes = () =>
 
     <Suspense fallback={<div>Loading...</div>}>
         <Switch>
-            <Route path={`/`}
+            <Route exact
+                   path={`/`}
                    component={React.lazy(() => import('./Dashboard'))}/>
         </Switch>
     </Suspense>
